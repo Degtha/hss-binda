@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE 2</title>
+    <link rel="stylesheet" href="css/p2.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <style>
+        .paper h4{
+            top: 125vh;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="img/kado.png" id="kado">
+            <img src="img/balon.png" id="balon">
+            <img src="img/bunga.png" id="bunga">
+            <img src="img/heart.png" id="heart">
+            <a href="page3.html">
+                <img src="img/hbd.png" id="hbd">
+            </a>
+        </div>
+
+        <div class="paper">
+            <div class="typing-animation">
+                <h3>Happy Sweet Seventeen Bindaa 🥳🎉</h3>
+                <br>
+                <span id="typing-text"></span>
+                <br>
+                <h4> <-- klik mahkotanya buat ke halaman selanjutnya</h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let kado = document.getElementById('kado')
+    let balon = document.getElementById('balon')
+    let bunda = document.getElementById('bunga')
+    let heart = document.getElementById('heart')
+    let hbd = document.getElementById('hbd')
+    window.addEventListener('scroll', () =>{
+        let value = window.scrollY;
+
+        kado.style.left= value * -6.5 + 'px';
+        balon.style.left= value * 4.5 + 'px';
+        bunga.style.left= value * -2.5 + 'px';
+        heart.style.left= value * 2.5 + 'px';
+        hbd.style.left= value * -1.5 + 'px';
+    })
+
+    const typingText = document.getElementById('typing-text');
+    const textToType = 'Maaf ya aku gak bisa ngasi kamu apa-apa selain web ini terus web nya juga banyak kurangnya mungkin dari desain sama konsep² yang agak absurd dikit heheheheh teruss maaf juga karena aku telat ngasi kado ini ke kamu pas di hari ulang tahun muu, perlu waktu 9 hari kurang lebih buat ngasi ke kamu karena aktifitas ku yang lain jadinya gak sempet ngasi kadonya ke kamu, oke lanjutt happy Sweet Seventeen ya Bindaa semoga kamu jadi wanita yang lebih tangguh, murah hati, dilancarkan rezekinya di tahun-tahun berikutnya terus jadi anak yang pintar demi bs ngebahagiain bapak & bunda tentunya di aku jugaa yang bakalan selalu sayang sama binda dan aku bakalan jadiin bukti klo web ini adalah rasa cintaku ke binda (walaupun agak aneh) terus makasih banyak ya sudah jadi pendamping kuu, kamu selalu ada pas aku lg kesusahan kek semisal aku banyak pikiran tentang hal-hal yang sebenarnya gak penting tp setelah curhat ke kamu jd serasa lega banget nih otak, terus makasi juga udh setia ma akuu dan aku harap kita bakalan jalan selamanya kek gni heheheh, makasi ya binda tentang cerita-cerita mu yang gak pernah ngebosenin, trs betapa excited nya kamu pas lagi nyeritain jujur aku kek seneng jdnya aku mikir kira² aku bisa gak selamanya ngebuat binda kek gni heheheh, sama yang terakhir makasi juga atas effort kamuu, kamu udah banyak ngasi aku effort trs dh lebih buat ngasii dan aku harap kita bakalan saling gak capek kalaupun ada yang capek nanti tinggal saling komunikasi aja ya bindaa, aku sayang banget sama bindaa, aku minta maaff karena udah ngebuat binda sakit hatii terutama tentang ovt ku yang gak bs ku kontrol dan kamu selalu berusaha buat nenangin aku yang selalu mikir kemana² terus kamu sekarang udah gede yaa udah 17 tahunn, udah gak boleh cengeng-cengeng lagi sayang mwahahah, ya semoga kedepannya hubungan kita bakalan lanjut terus dan kita selalu bersama yaa hehehehe, i love you sayangg';
+
+    let charIndex = 0;
+    let timer = null;
+
+    function typeChar() {
+    if (charIndex < textToType.length) {
+        typingText.textContent += textToType[charIndex];
+        charIndex++;
+        timer = setTimeout(typeChar, 18); // adjust the speed to your liking
+    } else {
+        clearTimeout(timer);
+    }
+    }
+    typeChar();
+</script>
+</html>

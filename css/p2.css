@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+}
+
+.container{
+    background-color: rgb(54, 51, 51);
+    z-index: 1;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#kado{
+    transform: translateX(35vw);
+    margin-top: 5vw;
+}
+
+#balon{
+    transform: translateX(35vw);
+    margin-top: 15vw;
+}
+
+#bunga{
+    transform: translateX(35vw);
+    margin-top: 25vw;
+}
+
+#heart{
+    transform: translateX(35vw);
+    margin-top: 35vw;
+}
+
+#hbd{
+    transform: translateX(37vw);
+    margin-top: 45vw;
+}
+.paper{ 
+    background-color: rgb(209, 193, 150);
+    z-index: 2;
+    margin: 10vh 50vh 10vh 50vh;
+    height: 120vh;
+    width: 100vh;
+}
+
+.typing-animation {
+    font-size: 20px;
+    text-align: justify;
+    width: 100vh; /* adjust the width to your liking */
+    overflow: hidden;
+    white-space: wrap; /* allow text to wrap to the next line */
+    padding: 0 5px;
+}
+  
+#typing-text {
+    font-family: monospace; /* use a monospace font for a typing effect */
+    font-size: 17px ;
+}
